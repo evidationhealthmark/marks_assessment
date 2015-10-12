@@ -4,17 +4,25 @@ angular.module('evidationApp.provider',[])
 
 function searchCtrl($scope, $http){
   $scope.query = '';
-
+  
   $scope.filterName = function(provider) {
+    var query = $scope.query.toLowerCase();
     if(provider.hasOwnProperty('first_name')){
-      if(provider.last_name.indexOf($scope.query) === 0){
-        return true;
-      } else {
-        fullName = provider.first_name + ' ' + provider.last_name;
-        return fullName.indexOf($scope.query) === 0;
-      }
+      var fullName = (provider.first_name + ' ' + provider.last_name).toLowerCase();
+      var lastName = provider.last_name.toLowerCase();
+      return lastName.indexOf(query) === 0 || fullName.indexOf(query) === 0;
     }
+    return false;
   };
+
+  $scope.filterOrganization = function(org){
+    var query = $scope.query.toLowerCase();
+    if(org.hasOwnProperty('organization_name')){
+      return org.organization_name.toLowerCase().indexOf(query) === 0;
+    }
+    return false;
+  }
+  
 
   $scope.postProviderData = function(providerInfo){
     $http.post('/providers', providerInfo)

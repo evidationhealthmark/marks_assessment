@@ -2,7 +2,7 @@ html body {
   margin: 0;
 }
 
-html body, input.form-control, button.userinfo {
+html body, input.form-control, .buttongroup .btn {
   background-color: #F5F5F5;
 }
 
@@ -73,13 +73,22 @@ h5.captionlogo{
 }
 
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
+    .main{
+      margin-top:100px;
+      margin-bottom:200px;
+      max-width: 75%;
+    }
+}
+
+@media (min-width: 996px) {
     .main{
       margin-top:100px;
       margin-bottom:200px;
       max-width: 50%;
     }
 }
+
 
 @media (max-width: 768px) {
     .main{
