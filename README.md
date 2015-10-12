@@ -1,4 +1,4 @@
-<h1>Evidation Health Assessment</h1>
+<h1>MedCompany </h1>
 <p>The finished product can be seen here at https://medcompany.herokuapp.com</p>
 <p>I used the following in creating this app:</P>
 <ul>
