@@ -1,0 +1,105 @@
+html body {
+  margin: 0;
+}
+
+html body, input.form-control, button.userinfo {
+  background-color: #F5F5F5;
+}
+
+label {
+  font-weight: normal !important;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin: 10px 0px;
+  padding: 10px;
+}
+
+input.form-control, button.userinfo{
+  height: 50px;
+}
+
+.companylogo{
+  display: inline-block;
+  margin-left: 7.5px;
+
+}
+
+div.circle {
+  border-radius: 100px;
+  width:20px;
+  height:20px;
+  border-style:solid;
+  border-width:2px;
+  border-color:#00A4A7;
+  margin:-3px -7.5px
+}
+
+div.consent{
+  margin-left: 20px;;
+}
+
+h5.captionlogo{
+  margin-top: 0px
+}
+
+#headerlogo, h3, h2, h4,h1 {
+  text-align: center;
+  font-weight: normal;
+}
+
+.main, li, button.btn {
+  border: 1px solid #cccecd;
+  background-color: white;
+}
+
+.main {
+  padding-right: 15px;
+  margin-left: 15px;
+  padding-bottom: 20px;
+}
+
+.forminfo {
+  padding: 0px 15px;
+}
+
+.boxheader{
+  margin: 30px;
+}
+
+
+@media (min-width: 992px) {
+    .main{
+      margin-top:100px;
+      margin-bottom:200px;
+      max-width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .main{
+      border: 0;
+    }
+    .leftbutton {
+      display: none;
+    }
+    button.btn{
+      margin:0px;
+    }
+    html body {
+      background-color:white;
+    }
+    #headerlogo{
+      background-color: #f5f5f5;
+      margin:-10px 0px;
+      padding:10px;
+    }
+    div.container {
+      margin-bottom: 100px;
+    }
+}

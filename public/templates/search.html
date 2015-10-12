@@ -1,0 +1,20 @@
+<h3 class='boxheader'>Search for a physician or organization.</h3>
+<input ng-model="query" type="text" class="form-control">
+<div ng-show='query.length > 0'>
+  <ul >
+    <li ng-repeat="physician in providerData| filter: filterName" ng-click='postProviderData(physician)'>
+      <div><strong>{{physician.first_name}} {{physician.last_name}} </strong></div>
+      <div><i>Physician</i></div>
+      <div>Zipcode: {{physician.zip}}</div>
+    </li>
+  </ul>
+  <ul>
+    <li ng-repeat="organization in providerData | filter: {organization_name: query}" ng-click='postProviderData(organization)'>
+      <div><strong>{{organization.organization_name}}</strong></div>
+      <div><i>Organization</i></div>
+      <div>Zipcode: {{organization.zip}}</div>
+    </li>  
+  </ul>
+</div>
+
+

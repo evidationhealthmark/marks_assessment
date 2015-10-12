@@ -1,0 +1,9 @@
+{
+  "name": "Evidation",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "~1.0.1",
+    "express": "~4.0.0",
+    "nodemon": "^1.7.1"
+  }
+}
